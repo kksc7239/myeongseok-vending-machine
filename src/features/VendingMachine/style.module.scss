@@ -1,0 +1,70 @@
+.container { padding: 16px; 
+  .pannels {
+    display: grid;
+    grid-template-columns: 1fr 1fr 0.5fr;
+    gap: 12px;
+    .panel {
+      border: 1px solid rgb(227, 227, 227);
+      border-radius: 12px;
+      padding: 14px;
+      background: #fff;
+      .sectionTitle { margin: 0 0 10px; font-weight: 700; font-size: 16px; }
+      .sectionSubTitle { margin: 10px 0 6px; font-weight: 600; font-size: 14px; }
+      .items {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(140px, 1fr));
+        gap: 10px;
+        .item {
+          border: 1px dashed rgb(206, 206, 206);
+          border-radius: 10px;
+          padding: 10px;
+          .itemTop { display: flex; justify-content: space-between; margin-bottom: 6px; }
+          .itemName { font-weight: 600; }
+          .itemPrice { color: #666; font-size: 13px; }
+        }
+        .badge {
+          display: inline-block;
+          padding: 2px 8px;
+          border-radius: 999px;
+          font-size: 12px;
+          margin-bottom: 8px;
+          margin-right: 5px;
+          &.ok { background: #e8fbf3; border: 1px solid #b8f0d6; } 
+          &.err { background: #ffecec; border: 1px solid #ffbcbc; } 
+        }
+      }
+      .btn {
+        appearance: none;
+        border: 1px solid #ddd;
+        background: #fafafa;
+        padding: 8px 10px;
+        border-radius: 10px;
+        cursor: pointer;
+        font-size: 14px;
+        &:disabled { opacity: .5; cursor: not-allowed; }
+        &.primary { background: #2563eb; color: #fff; border-color: #1e40af; }
+      }
+      .row { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 10px; }
+      .titleList {
+        display: grid;
+        grid-template-columns: 90px 1fr;
+        gap: 6px 10px;
+        margin: 8px 0 12px;
+        dt { color: #777; }
+        dd { margin: 0; }
+      }
+      .log {
+        height: 200px;
+        overflow: auto;
+        border: 1px solid #eee;
+        border-radius: 8px;
+        padding: 8px;
+        background: #fafafa;
+        font-size: 12px;
+        margin-bottom: 8px;
+      }
+      .muted { color: #777; font-size: 12px; }
+      .bankLine { display: flex; gap: 10px; align-items: center; margin: 8px 0; }
+    }
+  }
+}
