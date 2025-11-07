@@ -1,4 +1,4 @@
-## Vending Machine (자판기 과제)
+## Vending Machine
 
 간단한 자판기 시뮬레이터입니다.
 React와 MobX를 사용해 상태 기반 로직과 UI를 분리했고,
